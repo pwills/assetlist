@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: Monitor
+  description: LG monitor 24" colour plasma screen 
+  serial: 43547-WT547
+  location: Room 220
+
+two:
+  name: Base Unit
+  description: Acer 2.2gb dual core processor, 1gb RAM, 300gb hard-drive, dvd drive
+  serial: 98088-POP98
+  location: Room 220

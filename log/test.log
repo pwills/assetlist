@@ -1,0 +1,916 @@
+  [4;36;1mVote Load (0.4ms)[0m   [0;1mSELECT * FROM "votes" [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT * FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:38:17) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.5ms)
+Completed in 30ms (View: 25, DB: 2) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:38:17) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:38:17) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (3.4ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:38:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:38:17) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.8ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:38:17) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:38:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:38:17) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'MyString' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = 'MyString' AND "assets".id <> 980190962) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (5.6ms)
+Completed in 11ms (View: 8, DB: 1) | 200 OK [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:48:06) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.6ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:48:06) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:48:06) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (4.9ms)
+Completed in 10ms (View: 9, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:48:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:48:06) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.8ms)
+Completed in 6ms (View: 6, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:48:06) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:48:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:48:06) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = 'GJHK4-346FG' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:51:24) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.5ms)
+Completed in 21ms (View: 16, DB: 2) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:51:24) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:51:24) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (5.0ms)
+Completed in 9ms (View: 8, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:51:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:51:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.7ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:51:24) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:51:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:51:24) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = 'GJHK4-346FG' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:52:13) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.6ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:52:13) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:52:13) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (3.4ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:52:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:52:13) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.8ms)
+Completed in 6ms (View: 6, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:52:13) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:52:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:52:13) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = 'GJHK4-346FG' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:52:40) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.5ms)
+Completed in 20ms (View: 15, DB: 2) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:52:40) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:52:40) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (3.4ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:52:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:52:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.7ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:52:40) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:52:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:52:40) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = 'GJHK4-346FG' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:55:18) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.7ms)
+Completed in 22ms (View: 16, DB: 1) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:55:18) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.2ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:55:18) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (4.6ms)
+Completed in 9ms (View: 8, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:55:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:55:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.8ms)
+Completed in 6ms (View: 6, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:55:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:55:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:55:18) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = '43547-WT547' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:55:43) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.5ms)
+Completed in 20ms (View: 15, DB: 2) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:55:43) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:55:43) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (3.4ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:55:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:55:43) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.7ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:55:43) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:55:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:55:43) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = '43547-WT547' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:55:59) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.5ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:55:59) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:55:59) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (4.9ms)
+Completed in 9ms (View: 8, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:55:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:55:59) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.7ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:55:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:55:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:55:59) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = '43547-WT547' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:56:18) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.6ms)
+Completed in 21ms (View: 16, DB: 1) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:56:18) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:56:18) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (3.5ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:56:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:56:18) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.8ms)
+Completed in 6ms (View: 6, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:56:18) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:56:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:56:18) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = '43547-WT547' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:56:32) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.6ms)
+Completed in 20ms (View: 15, DB: 2) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:56:32) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:56:32) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (3.5ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:56:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:56:32) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.8ms)
+Completed in 6ms (View: 6, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:56:32) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:56:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:56:32) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = '43547-WT547' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 12:56:41) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.6ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 12:56:41) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 12:56:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (3.4ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:56:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 12:56:41) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.7ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 12:56:41) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 12:56:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 12:56:41) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = '43547-WT547' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+
+
+Processing AssetsController#create (for 0.0.0.0 at 2011-02-28 13:01:09) [POST]
+  Parameters: {"action"=>"create", "controller"=>"assets", "asset"=>{}}
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" IS NULL) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" IS NULL) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (9.5ms)
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://test.host/assets?]
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#destroy (for 0.0.0.0 at 2011-02-28 13:01:09) [DELETE]
+  Parameters: {"action"=>"destroy", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Destroy (0.1ms)[0m   [0mDELETE FROM "assets" WHERE "id" = 980190962[0m
+Redirected to http://test.host/assets
+Completed in 2ms (DB: 1) | 302 Found [http://test.host/assets/980190962]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSELECT count(*) AS count_all FROM "assets" [0m
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#edit (for 0.0.0.0 at 2011-02-28 13:01:09) [GET]
+  Parameters: {"action"=>"edit", "id"=>"980190962", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/edit
+Rendered assets/_form (3.4ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://test.host/assets/980190962/edit]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 13:01:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.3ms)[0m   [0mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://test.host/assets]
+
+
+Processing AssetsController#new (for 0.0.0.0 at 2011-02-28 13:01:09) [GET]
+  Parameters: {"action"=>"new", "controller"=>"assets"}
+Rendering template within layouts/application
+Rendering assets/new
+Rendered assets/_form (2.7ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://test.host/assets/new]
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#show (for 0.0.0.0 at 2011-02-28 13:01:09) [GET]
+  Parameters: {"action"=>"show", "id"=>"980190962", "controller"=>"assets"}
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+Rendering template within layouts/application
+Rendering assets/show
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets/980190962]
+
+
+Processing AssetsController#index (for 0.0.0.0 at 2011-02-28 13:01:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"assets"}
+  [4;36;1mAsset Load (0.3ms)[0m   [0;1mSELECT * FROM "assets" [0m
+Rendering template within layouts/application
+Rendering assets/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://test.host/assets]
+  [4;35;1mAsset Load (0.2ms)[0m   [0mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+
+
+Processing AssetsController#update (for 0.0.0.0 at 2011-02-28 13:01:09) [PUT]
+  Parameters: {"action"=>"update", "id"=>"980190962", "controller"=>"assets", "asset"=>{}}
+  [4;36;1mAsset Load (0.2ms)[0m   [0;1mSELECT * FROM "assets" WHERE ("assets"."id" = 980190962) [0m
+  [4;35;1mAsset Load (0.1ms)[0m   [0mSELECT "assets".id FROM "assets" WHERE ("assets"."name" = 'Monitor' AND "assets".id <> 980190962) LIMIT 1[0m
+  [4;36;1mAsset Load (0.1ms)[0m   [0;1mSELECT "assets".id FROM "assets" WHERE ("assets"."serial" = '43547-WT547' AND "assets".id <> 980190962) LIMIT 1[0m
+Redirected to http://test.host/assets/980190962
+Completed in 3ms (DB: 1) | 302 Found [http://test.host/assets/980190962?]

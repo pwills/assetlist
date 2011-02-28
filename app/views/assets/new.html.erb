@@ -1,0 +1,23 @@
+<html>
+<head>
+ <%= stylesheet_link_tag 'base.css' %>
+</head>
+<body>
+<center>
+
+<%= render :partial => 'form' %>
+
+<h1>Image Upload</h1>
+<%= form_tag ({:action => 'UploadFile'}, 
+:multipart => true) %>
+<p><label for="upload_file">Select File</label> : 
+<%= file_field 'upload', 'datafile' %></p>
+<%= submit_tag "Upload" %>
+<%= form_tag %>
+<br>
+
+<%= link_to 'Back', assets_path %>
+
+</center>
+</body>
+</html>

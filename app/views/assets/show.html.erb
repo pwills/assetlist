@@ -1,0 +1,54 @@
+
+<center>
+
+<br>
+
+<p><b>View Asset</b></p>
+
+<br>
+<br>
+<br>
+
+<p>
+  <b>Name:</b>
+  <%=h @asset.name %>
+</p>
+
+
+
+<p>
+  <b>Description:</b>
+  <%=h @asset.description %>
+</p>
+
+<p>
+  <b>Serial:</b>
+  <%=h @asset.serial %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @asset.location %>
+</p>
+
+
+<br>
+<br>
+<br>
+
+
+<% if logged_in? %>
+
+<%= link_to 'Edit', edit_asset_path(@asset) %> |
+
+<% end %>
+
+
+
+<%= link_to 'Back', assets_path %>
+
+
+
+</center>
+
+

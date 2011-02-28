@@ -1,0 +1,51 @@
+ <center>
+<h1>Listing assets</h1>
+
+<% if flash[:notice] %>
+<p style="color:green;">
+</p>
+<% end %>
+<br><br>
+<%= link_to 'New asset', new_asset_path %>
+<%= link_to "About Us", about_us_path %>
+
+
+<link href="/assets.atom" rel="alternate"
+title="ATOM" type="application/atom+xml" />
+
+
+<br><br><br>
+<table border>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Serial</th>
+    <th>Location</th>
+  </tr>
+
+
+<tr>
+
+<% @assets.each do |asset| %>
+    <td><%=h asset.name %></td>
+    <td><%=h asset.description %></td>
+    <td><%=h asset.serial %></td>
+    <td><%=h asset.location %></td>
+    <td><%= link_to 'Show', asset %></td>
+    
+    <% if logged_in? %>
+    
+    <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
+    <td><%= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete %></td>
+    
+    <% end %>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<br><br>
+
+
+
+</center>

@@ -1,0 +1,28 @@
+<center>
+
+<h1>Update <%= @asset.name %></h1>
+
+<p><% form_for @asset do |f| %></p>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.label :serial %><br />
+    <%= f.text_field :serial %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+ 
+    <%= f.submit 'Create' %>
+ 
+<% end %>
+
+</center>

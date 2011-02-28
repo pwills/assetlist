@@ -1,0 +1,136 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td 
+
+html{
+background-position: top right;
+background-repeat: repeat-y;
+
+}
+
+body {
+background-color: #d1dc66;
+	line-height: 1;
+border: 2;
+padding: 2px;
+vertical-align: center;
+font: 0.7em/1.5 Geneva, Arial, Helvetica, sans-serif;
+color: #15397F;
+margin: 1px;
+}
+
+
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+
+.boxed {
+  border: 1px groove navy ;
+  margin-right:800px;
+margin-left:820px;
+}
+
+
+#LJMU {float:left}
+
+#image {
+background: url('/images/header.jpg') no-repeat;
+width: 375px;
+height: 125px;
+float:right;
+}
+
+
+#container {
+  width: 40%;
+  padding: 15px;
+  margin: 10px auto;
+  border: solid 1px navy;
+  background-color: white;
+  
+}
+
+#flash_notice, #flash_error {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#flash_notice {
+  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#flash_error {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.fieldWithErrors {
+  display: inline;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #CF0000;
+  padding: 0px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 8px;
+}
+
+#errorExplanation ul {
+  margin: 2px 24px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: disc;
+}
+
+
+h2#vote_score {
+font-size: small;
+font-color:blue;
+
